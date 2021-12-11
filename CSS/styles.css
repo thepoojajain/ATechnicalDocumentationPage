@@ -1,0 +1,113 @@
+@import "./normalize.css";
+
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem;
+  line-height: 1.5;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  font-size: 2.8rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+.navbar header {
+  text-align: center;
+  margin: 2rem;
+}
+
+.header__section {
+  margin: 2rem;
+}
+
+.navbar ul {
+  padding-left: 0;
+  border: 1.5px solid black;
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  cursor: pointer;
+  border-left: hidden;
+  border-right: hidden;
+}
+
+.navbar li {
+  list-style: none;
+  border-bottom: 1px solid #4d4e53;
+  padding: 1rem 3rem;
+}
+
+.navbar li:last-child {
+  border-bottom: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.7rem;
+  color: black;
+}
+
+article {
+  margin: 2rem 4rem;
+}
+
+.main-doc li {
+  margin: 2rem 1.5rem;
+}
+
+.main-doc code {
+  background: #f7f7f7;
+  padding: 1rem;
+  margin: 1rem;
+  white-space: pre-line;
+  line-height: 2;
+  display: block;
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    flex-direction: row;
+  }
+
+  .navbar {
+    border-right: 1.5px solid black;
+    position: fixed;
+    top: 0;
+    min-width: 20rem;
+    font-size: 1rem;
+  }
+
+  .navbar header {
+    text-align: left;
+    margin: 2rem;
+    white-space: nowrap;
+  }
+  .navbar ul {
+    border: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 80vh;
+  }
+  .navbar li:first-child {
+    border-top: 1px solid #4d4e53;
+  }
+  .main-doc {
+    margin-left: 33rem;
+  }
+}
